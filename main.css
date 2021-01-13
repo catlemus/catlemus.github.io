@@ -653,6 +653,9 @@ screen less than or equal to 700px
     height: 300vh;
     padding-left: 1rem;
     padding-right: 1rem;
+    /*
+    added stuff for fixing text with sizes
+    */
   }
 
   .proj-txt p{
