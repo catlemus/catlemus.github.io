@@ -1,18 +1,292 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
+  <meta name = "viewport"
+      content ="width=device-width, user-scalable=no, initial-scale=1.0,
+      maximum-scale=1.0, minimum-scale=1.0">
+  <title>Portfolio Website</title>
+  <!--icons-->
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
+  rel="stylesheet">
   <link rel="stylesheet" href="main.css">
-<title>Catalina's Portfolio</title>
 </head>
+
 <body>
 
-<h1>Catalina's Work</h1>
-<h2>About Me</h2>
-<p>I am a second year student at Virginia Tech Majoring in Computer Science and minoring in Human Computer Interaction. </p>
-<p> </p>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="nav-logo">
+          <a href="web.html">
+            <img src="dLogo.gif" alt = "">
+          </a>
+        </div>
 
-<h2> Some Examples of My Work</h2>
-<p> After my first encounter with computer science at Girls WHo Code I built a mobile app with three other girls </p>
+        <div class="menu-icons open">
+          <i class="icon ion-md-menu"></i>
+        </div>
+        <ul class="nav-list">
+          <div class="menu-icons close">
+            <i class="icon ion-md-close"></i>
+          </div>
+          <li class="nav-item">
+            <a href='#home' class="nav-link current">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href='#about' class="nav-link">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a href='#projects' class="nav-link">Work</a>
+          </li>
+          <li class="nav-item">
+            <a href='#skills' class="nav-link">Skills</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="first-mess">
+          <h4>Catalina's Portfolio</h4>
+
+          <h1>Hi! I'm Catalina</h1>
+
+          <p>
+            Current Undergraduate Computer Science Student <br> Future Software Engineer
+          </p>
+          <div class="cta">
+            <a href="#contact" class="btn">Contact Me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-me">
+      <div class="container">
+        <div class="title-heading">
+        <h1>About Me</h1>
+        <p class="aboutm">
+          <!-- add more about me -->
+          I am a second year student at Virginia Tech Majoring in Computer
+          Science and minoring in Human Computer Interaction.
+
+          I enjoy the creative side
+          of Computer Science and can spend hours at a time on the design of my next
+          creation. I find Computer Science exciting and have the goal of becoming a
+          Software Engineer. The idea of being in a constantly changing field is exciting
+          and I take every opportunity I can to learn more. I am constantly starting new
+          personal projects such as building this website, learning how to build virtual
+          reality environments with Unity, or learning how to build a mobile app with Flutter.
+           I have
+          participated in Hackathons such as Technica which I a plan to do again next year
+          and other hackathons hosted at Virginia Tech.
+          I am a curious and creative person always looking for my next challenge.
+          In my free time I enjoy hiking with my dogs (I have a german shepherd and a
+          chocolate lab), watching new movies, and trying new foods.
+        </p>
+        <div class="my-picture">
+          <img src="prof.jpg" alt="" class="profile-pic">
+        </div>
+        </div>
+
+
+        <!--add picture of myself here-->
+      </div>
+
+    </section>
+
+    <section id="projects" class="projects">
+      <div class="container">
+        <div class="title-heading">
+
+          <h1>My Work</h1>
+          <p>
+            My first project at Girls Who Code
+          </p>
+          <h4>Coursework</h4>
+          <div class="project-row">
+            <div class="proj-pic">
+
+              <a href="Projects/covid-project.html">
+            <img src = "covidVis.png" alt="" class="image">
+
+            <div class="overlay overlayTop">
+              <div class="text"><span>Click to Learn More</span></div>
+            </div>
+          </a>
+
+            </div>
+            <div class = "proj-txt">
+              <h5>Spring 2020</h5>
+            <p>
+              I was assigned an end of semester project to design a visualization
+              tool application for covid-19. I designed the layout of the application
+              with a wireframe tool and wrote the uml along with documentation for
+              this tool.
+            </p>
+          </div>
+          </div>
+          <div class="project-row">
+            <div class="proj-pic">
+
+              <a href="Projects/course.html">
+            <img src = "vtLogo.png" alt="" class="image">
+
+            <div class="overlay overlayTop">
+
+                <div class="text"><span>Click to Learn More</span></div>
+
+            </div>
+          </a>
+
+            </div>
+            <div class = "proj-txt">
+              <h5>Fall 2019 - Present</h5>
+            <p>
+              Click the Virginia Tech Logo for a list of my Computer Science
+              related classes along with classes related to my minor Human
+              Computer Interaction. On this list I include classes I have already
+              taken and classes I am in the progress of for Spring 2021.
+              My expected graduation date is May 2023.
+            </p>
+          </div>
+          </div>
+
+          <h4>Outside Work</h4>
+
+          <div class="project-row">
+            <div class="proj-pic">
+
+              <a href="Projects/flutter.html">
+            <img src = "flutter.png" alt="" class="image">
+
+            <div class="overlay overlayTop">
+              <div class="text"><span>Click to Learn More</span></div>
+            </div>
+          </a>
+
+            </div>
+            <div class = "proj-txt">
+              <h5>Present/In Progress</h5>
+            <p>
+              I am currently in the process of developing a mobile
+              app using Flutter. This is my first app using Flutter
+              so through this process I have been learning Dart as well.
+              The app is meant to target student with the goal of helping
+              student schedule their time and assignments through the application.
+            </p>
+          </div>
+          </div>
+
+          <div class="project-row">
+            <div class="proj-pic">
+              <!-- makes the image a link -->
+              <a href="Projects/unique.html">
+              <img src = "uLogo.png" alt="" class="image">
+
+              <div class="overlay overlayTop">
+                <div class="text"><span>Click to Learn More</span></div>
+              </div>
+            </a>
+
+            </div>
+            <div class = "proj-txt">
+              <h5>Summer 2018</h5>
+            <p>
+              While participating the Girls Who Code Summer Immersion
+              Program I developed a mobile app in collaboration with
+              three other girls. This mobile app can to find a women's correct
+              pants size across various different stores based on the measurements
+              guides provided by each specific store.
+            </p>
+          </div>
+          </div>
+
+
+          <div class="project-row">
+            <div class="proj-pic">
+              <a href="Projects/web-work.html">
+            <img src = "html.png" alt="" class="image">
+
+              <div class="overlay overlayTop">
+
+                <div class="text"><span>Click to Learn More</span></div>
+              </div>
+            </a>
+            </div>
+            <div class = "proj-txt">
+              <h5>Summer 2018</h5>
+            <p>
+              I developed pages with HTML, CSS, and JavaScript during
+              my time at Girls Who Code and have updated them since then.
+              I developed a website for my favorite dog and a website to
+              play a game similar to Flappy Bird but pocket themed.
+            </p>
+          </div>
+          </div>
+
+          <div class="project-row">
+            <div class="proj-pic">
+              <a href="Projects/pyGames.html">
+            <img src = "pyGames.png" alt="" class="image">
+
+            <div class="overlay overlayTop">
+              <div class="text"><span>Click to Learn More</span></div>
+            </div>
+          </a>
+            </div>
+            <div class = "proj-txt">
+              <h5>Summer 2018</h5>
+            <p>
+              I first learned python during
+              my time at Girls Who Code. There I worked on several
+              different projects creating games such as hang man and
+              create your own story.
+            </p>
+          </div>
+          </div>
+
+          </div>
+        </div>
+
+    </section>
+
+
+    <section id="skills" class="skills">
+      <div class="container">
+        <div class="title-heading">
+
+          <h1>My Skills</h1>
+          <p>
+            Take a look a my current skills and resume<br>
+            I am always looking to learn more.
+            <a href="https://www.linkedin.com/in/catalina-lemus-a45b47167"> Click Here</a>
+            for my LinkedIn page.
+          </p>
+
+          <img src = "sgResume.jpg" alt="" class="res">
+        </div>
+        <div id="contact" class="contact">
+          <h1>Contact Information</h1>
+          <p>
+            Email: catalina19@vt.edu<br>
+            LinkedIn: www.linkedin.com/in/catalina-lemus-a45b47167
+          </p>
+      </div>
+    </section>
+
+  </main>
+
+
+
+  <script type="text/javascript" src="scripts.js"></script>
+
+  <script scr="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 
 
 </body>

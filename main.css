@@ -1,3 +1,693 @@
-body {
-  background-color: powderblue;
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html{
+  font-family:'Tahoma', sans-serif;
+  font-size: 10px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a{
+  text-decoration: none;
+}
+
+ul{
+  list-style:none;
+
+}
+
+p{
+  font-size: 1.6rem;
+}
+
+img{
+  width:100%;
+  max-width: 100%;
+  height: auto;
+}
+
+section{
+  padding: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+
+
+
+}
+
+body{
+  background-color: #282c34;
+  height: 100vh;
+  /*verflow:hidden;*/
+
+}
+
+header{
+  width: 65%;
+  height: 7rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index:1;
+
+}
+
+.container{
+  width:100%;
+  height: 100%;
+  max-width: 98rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  /*scroll
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  */
+}
+
+/*
+go back change color at border its the line
+under the menu and logo
+
+*/
+
+nav{
+  width:93%;
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255,255,255,.2);
+  background-color: #282c34;
+
+}
+/*
+size of logo
+*/
+.nav-logo{
+  width:5rem;
+}
+
+/*
+can go check out colors - is color of 3 line menu
+*/
+.menu-icons i{
+  font-size: 3.5rem;
+  color: #fafafa;
+  cursor: pointer;
+}
+
+/*
+color of close button
+*/
+.close i{
+  color: #db2e48;
+}
+
+.nav-list{
+  width: 25rem;
+  height:100vh;
+  background-color: #C3CAD9;
+  position: fixed;
+  top: 0;
+  right: -26rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1500;
+  transition: all 650ms ease-in-out;
+}
+
+.nav-list.active{
+  right: 0;
+
+}
+
+.close{
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+}
+
+/*
+vertical spacing of words in menu
+*/
+.nav-item{
+  margin: 1.5rem 0;
+}
+
+/*
+color of words in menu
+*/
+.nav-link{
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: rgba(0,0,0,.7);
+}
+
+/*
+if want to add picture to background
+background: linear-gradient(135deg, rgba(49,24,131,0.9) 0%, rgba(72,56,149,0.8)
+100%), url("dots.png") center no-repeat;
+background-size:cover;
+position:relative;
+*/
+
+/*
+ --------- HOME PAGE ---------
+*/
+.hero{
+  width:100%;
+  height: 100vh;
+
+  padding-bottom: 70rem;
+
+
+}
+/*
+.hero::before{
+  content: "";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width: 100%;
+  height: 4.7rem;
+  /*
+  background: url("") center no-repeat;
+  background-size: cover;
+  */
+  /*
+}
+*/
+
+/*
+ --- ANIMATION ---
+ .typewriter h1 {
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden; Ensures the content is not revealed until the animation
+  border-right: .15em solid orange; The typwriter cursor
+  white-space: nowrap; Keeps the content on a single line
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens
+  letter-spacing: .15em; /* Adjust as needed
+  animation:
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+}
+*/
+
+@-webkit-keyframes typing {
+  from { max-width: 0 }
+  to {max-width: 100%}
+
+}
+@-webkit-keyframes blink-caret {
+  from, to {border-color:transparent}
+  50% { border-color: #db2e48 }
+}
+
+.first-mess{
+  width: 100%;
+  max-width: 100rem;
+  max-height: 100rem;
+
+  color:#fafafa;
+
+  transform: translateY(40%);
+  text-align: center;
+
+
+}
+
+.first-mess h4{
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+  text-transform: uppercase;
+  font-size:1.6rem;
+
+}
+
+
+.first-mess h1{
+
+  display: inline-block;
+  text-transform: uppercase;
+  font-size:4rem;
+
+  text-align: center;
+  /*-top: 4rem;*/
+  overflow: hidden;
+  border-right: .15em solid #db2e48 ;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .1em;
+  animation:
+    typing 4.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+
+.first-mess p{
+  font-family:'Courier', monospace;
+
+  white-space:nowrap;
+    overflow:hidden;
+    -webkit-animation: type 5s steps(40, end);
+    animation: type 5s steps(40, end);
+}
+
+.first-mess p:nth-child(2){
+    white-space:nowrap;
+    overflow:hidden;
+    opacity:0;
+    -webkit-animation: type 5s steps(40, end);
+    animation: type2 5s steps(40, end);
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.btn{
+  background-color: #db2e48;
+  border-radius: 2rem;
+  color: white;
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 1rem 2.5rem;
+  text-transform: uppercase;
+  transition: background-color 650ms;
+
+}
+
+.btn:hover{
+  background-color: #ad2e42;
+}
+
+/*
+about me
+padding-top: 60rem;
+padding-left: 30rem;
+padding-right:30rem;
+*/
+
+
+/*
+  -------- ABOUT ME -----------
+
+*/
+
+.about-me{
+  width:100%;
+  height: 100vh;
+
+}
+
+.title-heading{
+  text-align:center;
+  margin-bottom:10rem;
+  color: white;
+}
+
+.title-heading h1{
+  font-size: 4rem;
+}
+
+/*
+so text stays in square
+*/
+.aboutm{
+  padding-left: 10rem;
+  padding-right: 20rem;
+}
+.title-heading p{
+  padding-top: 2rem;
+  font-family:'Courier', monospace;
+
+}
+.my-picture img{
+
+  width: 20rem;
+  height: 20rem;
+  margin-top: 5rem;
+  overflow:hidden;
+  position: relative;
+  border-radius: 50%;
+  border: 5px solid #ad2e42;
+
+
+}
+
+
+/*
+the red/pink background
+can play around with percent to make darker
+*/
+.title-heading h1::before{
+  content:"";
+  position:absolute;
+  top:90rem;
+  left:15rem;
+  width:60%;
+  height:47%;
+  background-image: linear-gradient(135deg, rgba(208, 44, 81, 0.16) 100%, rgba(49,24,131,0.9)
+  0%);
+  z-index: -1;
+}
+
+.title-heading p::before{
+  content:"";
+  position:absolute;
+  top:96rem;
+  left:29rem;
+  width:60%;
+  height:45%;
+  background-image: linear-gradient(135deg, rgba(208, 44, 81, 0.15) 100%, rgba(49,24,131,0.9)
+  0%);
+  z-index: -1;
+}
+
+
+
+/*
+if want to add picture background
+*/
+.projects{
+  padding: 10rem;
+  width:100%;
+  height: 300vh;
+
+}
+
+/*
+if want transition header
+will be at top of page
+*/
+/*
+.projects::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:4.7rem;
+  /*background:url("") center no-repeat;
+  background-size:cover;
+
+}
+*/
+
+
+/*
+if want to add icon can here
+*/
+
+/*
+  --------  PROJECTS PAGE ---------
+*/
+
+/*
+different work section style : Coursework and other
+*/
+.title-heading h4{
+  font-size: 2.5rem;
+  text-align: center;
+  border-bottom: 2px solid #ad2e42;
+  border-top: 2px solid #ad2e42;
+  margin: 3rem;
+
+}
+
+.proj-pic{
+  float:left;
+  position: relative;
+  display: inline-block;
+  width:50%;
+  padding:10px;
+ vertical-align: middle;
+  text-align:center;
+  color:white;
+}
+
+.image{
+  display: block;
+  width:600px;
+  height: 260px;
+
+}
+
+.image:hover{
+    /*for blur maybe*/
+  filter: blur(5px) brightness(40%);
+}
+
+/*
+click me background color
+*/
+span{
+  background-color: #ad2e42;
+}
+
+
+.text{
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  top: 45%;
+  left: 15%;
+  text-align: center;
+  font-family:'Courier', monospace;
+  font-weight: bold;
+  opacity: 0;
+  transition: .3s;
+  z-index: 1;
+}
+
+.proj-pic:hover :not(.image){
+  opacity: 1;
+
+}
+
+
+.proj-txt{
+  float:left;
+  width:50%;
+  padding-top: 5rem;
+  /*text-align: justify;*/
+}
+
+.proj-txt p{
+  padding-left: 2rem;
+}
+
+.proj-txt h5{
+  text-align: center;
+  font-size: 2rem;
+  font-family:'Courier', monospace;
+  font-weight: bold;
+}
+
+
+
+.project-row::after{
+  content:"";
+  clear: both;
+  display: table;
+}
+
+
+.more-projects{
+  padding-top: 0;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  font-family:'Courier', monospace;
+  padding-bottom: 10rem;
+}
+
+/*
+  -------- SKILLS PAGE --------
+*/
+.skills{
+  padding-top: 10rem;
+}
+
+.res{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  width: 700px;
+  height: 900px;
+
+}
+
+.skills a{
+  color: #db2e48;
+}
+
+.contact{
+  border-top: 2px solid #737373;
+  color:white;
+  font-family:'Courier', monospace;
+  padding-bottom: 5rem;
+}
+
+.contact h1{
+  line-height: 30px;
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+/*
+projects and skills uses title-heading format
+*/
+
+
+/*media stuff*/
+
+@media screen and (min-width: 350px){
+  .first-mess{
+    transform: translateY(40%);
+
+  }
+  .
+}
+
+@media screen and (min-width: 500px){
+  .hero::before{
+    height: 9.4rem;
+    /*
+    can add border here
+    left:15rem;
+    */
+  }
+  /*
+
+  */
+
+}
+@media screen and (min-width: 700px){
+  header{
+    height: 8rem;
+  }
+
+/*
+transition to menus*/
+
+  .nav-list{
+    width: initial;
+    height: initial;
+    background-color: transparent;
+    position: initial;
+    top: initial;
+    right: initial;
+    flex-direction:row;
+    transition: initial;
+
+  }
+
+  .menu-icons{
+    display:none;
+
+  }
+  .nav-item{
+    margin: 0 2.5rem;
+
+  }
+  .nav-link,
+  .current{
+    color: white;
+    position: relative;
+    font-size: 1.3rem;
+  }
+
+  .nav-link::before,
+  .current::before{
+    content:"";
+    position:absolute;
+    left: 0;
+    bottom:-.5rem;
+    background-color:  #ad2e42;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 650ms;
+
+  }
+
+  .current::before{
+    transform:scaleX(1);
+  }
+
+  .nav-link:hover::before{
+    transform: scaleX(1);
+
+  }
+}
+
+/*
+screen less than or equal to 700px
+*/
+@media screen and (max-width: 700px){
+
+
+  .hero{
+    height:60vh;
+  }
+
+  .first-mess{
+    transform: translateY(50%);
+  }
+
+  .title-heading h1{
+    font-size:2.5rem;
+  }
+  .aboutm{
+
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .title-heading h1::before{
+
+    top:90rem;
+    left:2rem;
+    width:80%;
+    height:50%;
+    height:25rem;
+  }
+  .title-heading p::before{
+    height:20rem;
+    top:94rem;
+    left:5rem;
+    width:90%;
+    height:50%;
+    height:30rem;
+  }
+
+  .skills{
+    padding-top: 30rem;
+  }
+
+}
+
+@media screen and (min-width: 950px){
+  .hero::before{
+    height: 22.7rem;
+    /*
+    can add border here*/
+
+  }
 }
