@@ -1,0 +1,68 @@
+h1 {background-color:black; color:LimeGreen; font-size: 90px}
+body {
+    background-image: url("https://wallpaper.wiki/wp-content/uploads/2017/04/wallpaper.wiki-Bamboo-Forest-Background-HD-PIC-WPC004558.jpg");
+}
+a{color:white;}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;}
+p {text-align: center;}
+footer{
+  text-align: center;
+  font-size:50px;}
+h3 {background-color:black; color:green;text-align: center;}
+h3 {font-family: "Veranda", sans-serif;}
+p {color: black; font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif ;font-size:20px}
+h3{
+  border:5px solid black
+}
+h1{
+  top:100px;
+}
+
+.tab {
+    overflow: hidden;
+    border: 1px solid LimeGreen;
+    background-color: Green;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: limegreen;
+    float: left;
+    border: 1px solid LimeGreen;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: Chartreuse;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: Lime;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 6px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+    border-top: none;
+}
+@-webkit-keyframes fadeEffect{
+  from {opacity:0;}
+  to {opacity:1;}
+}
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
