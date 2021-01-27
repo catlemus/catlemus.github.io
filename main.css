@@ -435,10 +435,13 @@ different work section style : Coursework and other
 
 }
 
+/*
+text under the date of projects
+*/
 .p_title{
   font-size:2rem;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-family:'Courier', monospace;
   color: #DD6578;
   font-weight: normal;
@@ -560,6 +563,10 @@ span{
   line-height: 30px;
   font-size: 2rem;
   padding-bottom: 1rem;
+}
+
+.contact a{
+  color:#DD6578;
 }
 /*
 projects and skills uses title-heading format
