@@ -387,12 +387,7 @@ can play around with percent to make darker
 /*
 if want to add picture background
 */
-.projects{
-  padding: 10rem;
-  width:100%;
-  height: 250vh;
 
-}
 
 /*
 if want transition header
@@ -421,16 +416,32 @@ if want to add icon can here
   --------  PROJECTS PAGE ---------
 */
 
+.projects{
+  padding: 10rem;
+  width:100%;
+  height: 300vh;
+
+}
+
 /*
 different work section style : Coursework and other
 */
-.title-heading h4{
+.title-heading h3{
   font-size: 2.5rem;
   text-align: center;
   border-bottom: 2px solid #ad2e42;
   border-top: 2px solid #ad2e42;
   margin: 3rem;
 
+}
+
+.p_title{
+  font-size:2rem;
+  text-align: center;
+  font-size: 2rem;
+  font-family:'Courier', monospace;
+  color: #DD6578;
+  font-weight: normal;
 }
 
 .proj-pic{
